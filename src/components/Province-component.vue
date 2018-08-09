@@ -41,9 +41,15 @@
           <h5>Province</h5>
         </div>
       </div>
-      <div>
-        <li v-for="provinceList in provinceLists" v-bind:provinceList="provinceList">
-        </li>
+      <div class="row">
+        <div class="paginate">
+          <pagination-page :settings="settings">
+            <div slot="page" slot-scope="item">
+              <div>{{item.originalEvent.data}}</div>
+            </div>
+          </pagination-page>
+          <pagination-control :settings="settings" />
+        </div>
       </div>
     </div>
     <!-- contain province end -->
@@ -67,11 +73,124 @@
   import { vueTest } from '../main.js';
 
   export default {
-      props: ['provinceLists'],
+      data() {
+        return {
+          arrayData: [
+            {
+              data: "Aceh"
+            },
+            {
+              data: "Bali"
+            },
+            {
+              data: "Banten"
+            },
+            {
+              data: "Bengkulu"
+            },
+            {
+              data: "Gorontalo"
+            },
+            {
+              data: "Jakarta"
+            },
+            {
+              data: "Jambi"
+            },
+            {
+              data: "Jawa Barat"
+            },
+            {
+              data: "Jawa Tengah"
+            },
+            {
+              data: "Jawa Timur"
+            },
+            {
+              data: "Kalimantan Barat"
+            },
+            {
+              data: "Kalimantan Selatan"
+            },
+            {
+              data: "Kalimantan Tengah"
+            },
+            {
+              data: "Kalimantan Timur"
+            },
+            {
+              data: "Kalimantan Utara"
+            },
+            {
+              data: "Kepulauan Bangka Belitung"
+            },
+            {
+              data: "Kepulauan Riau"
+            },
+            {
+              data: "Lampung"
+            },
+            {
+              data: "Maluku"
+            },
+            {
+              data: "Maluku Utara"
+            },
+            {
+              data: "Nusa Tenggara Barat"
+            },
+            {
+              data: "Nusa Tenggara Timur"
+            },
+            {
+              data: "Papua"
+            },
+            {
+              data: "Papua Barat"
+            },
+            {
+              data: "Sulawesi Barat"
+            },
+            {
+              data: "Sulawesi Selatan"
+            },
+            {
+              data: "Sulawesi Tengah"
+            },
+            {
+              data: "Sulawesi Tenggara"
+            },
+            {
+              data: "Sulawesi Utara"
+            },
+            {
+              data: "Sumatera Barat"
+            },
+            {
+              data: "Sumatera Selatan"
+            },
+            {
+              data: "Sumatera Utara"
+            },
+            {
+              data: "Yogyakarta"
+            }
+          ]
+        }
+      },
+
       methods: {
           switchComponent(comp) {
               vueTest.$emit('switchComp', comp);
           }
+      },
+
+      computed: {
+        settings: function () {
+          return {
+            arrayData: this.arrayData
+          }
+        }
       }
   }
 </script>
@@ -123,6 +242,10 @@
 
   h5 {
     color: #ff77b4;
+  }
+
+  .paginate {
+    margin-top: -50px;
   }
 
   .rowButton {
