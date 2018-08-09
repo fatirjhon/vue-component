@@ -5,7 +5,9 @@
     <!-- step information start -->
     <div class="row step">
       <div class="col s1 circle" id="stepOne">
-        <span class="dot"></span>
+        <span class="dot">
+          <img src="../assets/info.png" />
+        </span>
       </div>
       <div class="col s1 line" id="lineOne">
         <span class="bar"></span>
@@ -147,6 +149,10 @@
 
   .step #stepOne .dot {
     background: linear-gradient(to right, #c700ff, #ff77b4);
+  }
+
+  .step span img {
+    margin: 12px;
   }
 
   h5 {

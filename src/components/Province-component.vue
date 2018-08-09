@@ -5,13 +5,18 @@
     <!-- step province start -->
     <div class="row step">
       <div class="col s1 circle" id="stepOne">
-        <span class="dot"></span>
+        <span class="dot">
+          <img src="../assets/done.png" />
+        </span>
       </div>
       <div class="col s1 line" id="lineOne">
-        <span class="bar"></span>
+        <span class="bar">
+        </span>
       </div>
       <div class="col s1 circle" id="stepTwo">
-        <span class="dot"></span>
+        <span class="dot">
+          <img src="../assets/location.png" />
+        </span>
       </div>
       <div class="col s1 line" id="lineTwo">
         <span class="bar"></span>
@@ -238,6 +243,14 @@
   .step #lineOne .bar,
   .step #stepTwo .dot {
     background: linear-gradient(to right, #c700ff, #ff77b4);
+  }
+
+  .step #stepOne span img {
+    margin: 11px 0 0 7px;
+  }
+
+  .step span img {
+    margin: 12px 0 0 15px;
   }
 
   h5 {

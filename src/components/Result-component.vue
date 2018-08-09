@@ -5,31 +5,41 @@
     <!-- step profile start -->
     <div class="row step">
       <div class="col s1 circle" id="stepOne">
-        <span class="dot"></span>
+        <span class="dot">
+          <img src="../assets/done.png" />
+        </span>
       </div>
       <div class="col s1 line" id="lineOne">
         <span class="bar"></span>
       </div>
       <div class="col s1 circle" id="stepTwo">
-        <span class="dot"></span>
+        <span class="dot">
+          <img src="../assets/done.png" />
+        </span>
       </div>
       <div class="col s1 line" id="lineTwo">
         <span class="bar"></span>
       </div>
       <div class="col s1 circle" id="stepThree">
-        <span class="dot"></span>
+        <span class="dot">
+          <img src="../assets/done.png" />
+        </span>
       </div>
       <div class="col s1 line" id="lineThree">
         <span class="bar"></span>
       </div>
       <div class="col s1 circle" id="stepFour">
-        <span class="dot"></span>
+        <span class="dot">
+          <img src="../assets/done.png" />
+        </span>
       </div>
       <div class="col s1 line" id="lineFour">
         <span class="bar"></span>
       </div>
       <div class="col s1 circle" id="stepFive">
-        <span class="dot"></span>
+        <span class="dot">
+          <img src="../assets/done.png" />
+        </span>
       </div>
     </div>
     <!-- step profile end -->
@@ -127,6 +137,10 @@
   .step #lineFour .bar,
   .step #stepFive .dot {
     background: linear-gradient(to right, #c700ff, #ff77b4);
+  }
+
+  .step span img {
+    margin: 11px 0 0 7px;
   }
 
   .key {
